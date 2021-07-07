@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">내동생</string>
+    <string name="nav_open_drawer">Open Navigation</string>
+    <string name="nav_close_drawer">Close Navigation</string>
+</resources>

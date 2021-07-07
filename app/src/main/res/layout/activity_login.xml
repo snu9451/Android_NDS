@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/toolbar_main" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ndsblue_light">
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="내 동네생활"
+        android:textSize="40dp"
+        android:textColor="@color/black"/>
+        <EditText
+                android:id="@+id/etm_id"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginTop="15dp"
+                android:padding="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:hint="ID"
+                android:textColorHint="@color/black"/>
+        <EditText
+            android:id="@+id/etm_pw"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="10dp"
+            android:padding="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:hint="Password"
+            android:textColorHint="@color/black"
+            android:inputType="textPassword"/>
+        <!-- 체크박스: 아이디 저장 | 자동 로그인 -->
+        <LinearLayout
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아이디 저장"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="자동 로그인"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="117dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/btn_login"
+                android:onClick="login"
+                android:text="로그인"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/btn_join"
+                android:layout_width="117dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/btn_join"
+                android:onClick="join"
+                android:text="회원가입"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_nil"
+            android:layout_width="255dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_nil"
+            android:onClick="snsLogin"
+            android:text="네이버 아이디로 로그인"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_marginTop="650dp"
+        android:layout_marginLeft="330dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
+</LinearLayout>
