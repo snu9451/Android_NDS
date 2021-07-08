@@ -60,10 +60,18 @@ public class LoginActivity extends AppCompatActivity implements NavigationView.O
         return false;
     }
 
-    // 로그인 버튼 클릭 시의 이벤트 처리 구현
+    // 회원가입 버튼 클릭 시의 이벤트 처리 구현
     public void join(View view){
-        Toast.makeText(getApplicationContext(), "회원가입으로 이동합니다.", Toast.LENGTH_SHORT);
+        Log.i("myLog","회원가입 버튼 클릭");
+        Toast.makeText(getApplicationContext(), "회원가입으로 이동합니다.", Toast.LENGTH_LONG);
         Intent intent = new Intent(getApplicationContext(), JoinActivity.class);
+        startActivity(intent);
+    }
+    // 로그인 버튼 클릭 시의 이벤트 처리 구현
+    public void login(View view){
+        Log.i("myLog","로그인 버튼 클릭");
+//        Toast.makeText(getApplicationContext(), "메인페이지로 이동합니다.", Toast.LENGTH_LONG);
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
     }
 

@@ -5,17 +5,113 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <LinearLayout
-        android:orientation="horizontal"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <include
-            layout="@layout/toolbar_main" />
-    </LinearLayout>
+        android:layout_height="match_parent">
+        <!-- ============== [[ 프래그먼트가 포함될 프레임레이아웃 ]] ================ -->
+        <LinearLayout
+            android:gravity="fill"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include
+                layout="@layout/toolbar_main" />
+            <androidx.fragment.app.FragmentContainerView
+                android:layout_gravity="center"
+                android:background="@color/ndsyellow_light"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/frag_req_errand"/>
+        </LinearLayout>
+        <!-- =================== [[ 플로팅 버튼 영역 ]] =================== -->
+        <LinearLayout
+            android:gravity="end"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:orientation="vertical">
+            <LinearLayout
+                android:gravity="center_vertical|end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:text="중고거래"/>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_item"
+                    android:backgroundTint="@color/ndsblue_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_plus_ndsblue"
+                    app:fabCustomSize="50dp"
+                    android:visibility="invisible"
+                    android:enabled="false"
+                    android:layout_margin="20dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center_vertical|end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_errand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:text="심부름"/>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_errand"
+                    android:backgroundTint="@color/ndsblue_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_plus_ndsblue"
+                    app:fabCustomSize="50dp"
+                    android:visibility="invisible"
+                    android:enabled="false"
+                    android:layout_margin="20dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center_vertical|end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:text="채팅"/>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_chat"
+                    android:backgroundTint="@color/ndsblue_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_plus_ndsblue"
+                    app:fabCustomSize="50dp"
+                    android:visibility="invisible"
+                    android:enabled="false"
+                    android:layout_margin="20dp" />
+            </LinearLayout>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:gravity="center_vertical|end"
+                android:id="@+id/fab_main"
+                android:backgroundTint="@color/ndsblue_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_plus_ndsblue"
+                android:onClick="f_menuExtend"
+                app:fabCustomSize="50dp"
+                android:layout_margin="20dp"/>
+        </LinearLayout>
+    </FrameLayout>
+
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_gravity="start"
-
         app:menu="@menu/activity_main_drawer"
         android:background="@color/ndsyellow_light"
         android:layout_width="wrap_content"
