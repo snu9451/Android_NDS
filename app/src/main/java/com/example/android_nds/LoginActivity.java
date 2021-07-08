@@ -4,9 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -56,4 +59,13 @@ public class LoginActivity extends AppCompatActivity implements NavigationView.O
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         return false;
     }
+
+    // 로그인 버튼 클릭 시의 이벤트 처리 구현
+    public void join(View view){
+        Toast.makeText(getApplicationContext(), "회원가입으로 이동합니다.", Toast.LENGTH_SHORT);
+        Intent intent = new Intent(getApplicationContext(), JoinActivity.class);
+        startActivity(intent);
+    }
+
+
 }
