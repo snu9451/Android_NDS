@@ -14,12 +14,12 @@
         android:textSize="20sp"
         android:textColor="@color/white"
         android:background="@drawable/btn_dblue"/>
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="25dp"
         android:id="@+id/lv_req_errand"
         android:layout_gravity="center"
         android:layout_width="350dp"
         android:layout_height="500dp"
         android:background="@drawable/btn_lblue">
-    </ListView>
+    </androidx.recyclerview.widget.RecyclerView>
 </FrameLayout>
