@@ -1,4 +1,4 @@
-package com.example.android_nds;
+package com.example.android_nds_java;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
